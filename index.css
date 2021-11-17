@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+@font-face {
+    font-family: 'Noto Sans Display', sans-serif;
+    src: url();
+}
+.container {
+    font-family: 'Noto Sans Display', sans-serif;
+    background-image: url(https://static.surveysparrow.com/site/assets/ss-dots-pattern-bg.svg);
+    background-color: rgba(212, 205, 212,0.1);
+}
+
+form {
+    min-height: 200vh;
+    padding: 1rem;
+}
+
+ section {
+    border-radius: 10px;
+    margin-top: 1rem;
+}   
+
+#title {
+    font-size: 30px;
+    text-align: center;
+}
+
+#description {
+    font-size: 1px;
+    text-align: center;
+}
+
+/*-----DETAILS-----*/
+
+#details {
+    background-color: rgba(222, 184, 135, 0.137);
+    padding: 0.5rem;
+}
+
+#details h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#details #form-input {
+    margin: 0.2rem;
+    padding: 0.23rem;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 1rem;
+}
+
+#details #form-input label {
+    margin: 0.1rem;
+    padding: 0.15rem;
+    width: 50px;
+}
+
+#details #form-input input {
+    margin: 0.1rem;
+    padding: 0.15rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+#details #gender-input {
+    margin: 0.2rem;
+    padding: 0.23rem;
+    margin-left: 1rem;
+}
+
+#details #gender-input span {
+    margin: 0.1rem;
+    padding: 0.15rem;
+}
+
+#details #gender-input input {
+    margin: 0.1rem;
+    padding: 0.15rem;
+    margin-left: 0.55rem;
+}
+
+#details #ocupation-input #occupation {
+    margin: 0.2rem;
+    padding: 0.23rem;
+    margin-left: 1rem;
+}
+
+#details #ocupation-input #dropdown {
+    margin-left: 1rem;
+    margin: 0.1rem;
+    padding: 0.15rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*-----SURVEY-----*/
+
+#survey {
+    background-color: rgba(222, 184, 135, 0.137);
+    padding: 1.5rem;
+}
+
+#survey h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#survey #form-survey {
+    margin-top: 0.5rem;
+    line-height: 23.5px;
+}
+
+#survey #form-survey p {
+    font-size: larger;
+    padding: 5px;
+}
+
+#survey #form-survey label {
+    font-size: 16px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#survey #form-survey #rate-eL, #survey #form-survey #rec-eL{
+    margin-left: 1rem;
+}
+
+/*-----FEEDBACK-----*/
+
+#feedback {
+    background-color: rgba(222, 184, 135, 0.137);
+    display: flex;
+    flex-flow: column;
+}
+
+#feedback h2 {
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#feedback textarea {
+    min-height: 150px;
+    width: 80%;
+    margin: auto;
+}
+
+#feedback #submit-btn {
+    margin: 1rem auto;
+}
+
+#submit-btn button {
+    height: 30px;
+    width: 100px;
+    background-color: rgb(55, 118, 255);
+    border: none;
+    color: seashell;
+    border-radius: 15px;
+}
+
+#submit-btn button:hover {
+    background-color: rgb(1, 50, 156);
+}
+
+@media (min-width:1000px) {
+    .container {
+        font-family: 'Noto Sans Display', sans-serif;
+        background-image: url(https://static.surveysparrow.com/site/assets/ss-dots-pattern-bg.svg);
+    
+    }
+    h1 {
+        font-size: 36px;
+        max-width: fit-content;
+        margin: auto;
+    }
+    
+    #description {
+        font-size: 16px;
+        max-width: fit-content;
+        margin: auto;
+    }
+    
+    #survey-form {
+        max-width: 800px;
+        margin: auto;
+    
+    }
+    
+    section {
+        background-color: rgba(230, 219, 219, 0.459);
+        border-radius: 10px;  
+    }
+    
+    h2 {
+        max-width: fit-content;
+        margin: 15px auto;
+        text-align: center;
+    }
+    
+    #form-input{
+        max-width: 600px;
+        margin: auto;
+        padding: 10px;
+        font-size: 24px;
+    }
+    
+    #form-input input {
+        width: 350px;
+        height: 35px;
+        margin-top: 5px;
+        border: 10px 10px 10px 10px  blue;
+        border-radius: 5px;
+    }
+    
+    #gender-input span {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+    
+    #gender-input {
+        max-width: 600px;
+        margin: auto;
+        padding: 10px;
+        
+    }
+    
+    
+    #dropdown {
+        min-width: 300px;
+        min-height: 35px;
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: black;
+    }
+    
+    
+    
+    #form-survey {
+        max-width: 600px;
+        margin: 10px  auto;
+        padding: 10px;
+        
+    }
+    
+    #rate-eL {
+        max-width: fit-content;
+        min-height: 35px;
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 5px;
+        border-width: 2px;
+        border-color: black;
+    }
+    
+    
+    #form-survey p {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    small {
+        font-size: 12px;
+        font-weight: 200;
+    }
+    
+    #comments {
+        min-height: 120px;
+        width: 100%;
+        padding: 0.625rem;
+        resize: vertical;
+    }
+    
+    #submit-btn {
+        max-width: fit-content;
+        margin: 10px auto;
+    }
+    
+    #submit {
+        margin: 10px;
+        min-width: 150px;
+        min-height: 20px;
+        font-family: 'Noto Sans Display', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        border: 1px 1px 1px 1px rgb(129, 124, 124);
+        border-radius: 15px;
+    }
+    #submit:hover {
+        background-color: tomato;
+        transform: scale(1.2);
+        border: none;
+    }
+
+}
