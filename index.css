@@ -14,7 +14,7 @@
 }
 
 form {
-    min-height: 200vh;
+    height: 100vh;
     padding: 1rem;
 }
 
@@ -29,7 +29,7 @@ form {
 }
 
 #description {
-    font-size: 1px;
+    font-size: 10px;
     text-align: center;
 }
 
@@ -38,6 +38,11 @@ form {
 #details {
     background-color: rgba(222, 184, 135, 0.137);
     padding: 0.5rem;
+}
+
+.details {
+    width: fit-content;
+    margin: auto;
 }
 
 #details h2 {
@@ -64,6 +69,11 @@ form {
     padding: 0.15rem;
     margin-left: 1rem;
     border-radius: 5px;
+}
+
+.gender_occupation {
+    width: fit-content;
+    margin: auto;
 }
 
 #details #gender-input {
@@ -98,6 +108,25 @@ form {
     text-align: center;
 }
 
+.submit-details {
+   width: fit-content;
+   margin: auto;
+   margin-block: 1rem;
+}
+.submit-details > a{
+    text-decoration: none;
+    color: inherit;
+    border: 0.5px solid;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.submit-details > a:hover {
+    background-color: rgba(180, 147, 180);  
+    color: rgb(12, 12, 10);
+    transform: scale(1.1);
+}
 /*-----SURVEY-----*/
 
 #survey {
