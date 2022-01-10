@@ -12,33 +12,33 @@
     <div class="container">
         <h1 id="title">E-Learning Survey Form</h1>
         <p id="description">A survey to help improve the quality of e-learning</p>
-        <form action="" id="survey-form">
+        <form action="./survey.html" id="survey-form" method="get">
             <section id="details">
                 <div class="details">
                     <h2>Details</h2>
                     <div id="form-input">
                         <label for="name" id="name-label"><strong>Name</strong> </label><br>
-                        <input type="text" name="name" id="name" placeholder="Surname Firstname" required>
+                        <input type="text" id="name" placeholder="Surname Firstname" required>
                     </div><br>
                     <div id="form-input">
                         <label for="email" id="email-label"><strong>Email</strong> </label><br>
-                        <input type="email" name="email" id="email" placeholder="example@email.com" required>
+                        <input type="email" id="email" placeholder="example@email.com" required>
                     </div><br>
                     <div id="form-input">
-                        <label for="number" id="number-label"><strong>Age</strong> </label><br>
-                        <input type="number" name="number" id="number" value="15" min="15" max="65" placeholder="15" required>
+                        <label for="age" id="age-label"><strong>Age</strong> </label><br>
+                        <input type="number" id="age" value="15" min="15" max="65" placeholder="15" required>
                     </div><br>
                     <div class="gender_occupation">
                         <div id="gender-input" >
                             <span><strong> Gender</strong> </span>
-                            <input type="radio" value="male" name="gender" id="male" required checked>
+                            <input type="radio" value="male" id="gender" required checked>
                             <label for="male" id="male-label">Male </label>
-                            <input type="radio" value="female" name="gender" id="female">
+                            <input type="radio" value="female" id="gender">
                             <label for="female" id="female-label">Female </label>
                         </div>
                         <div id="ocupation-input">
                             <p id="occupation"><strong>What's your occupation ?</strong></p>
-                            <select name="job" id="dropdown" required>
+                            <select id="dropdown" required>
                                 <option value="student">Student</option>
                                 <option value="ftj">Full Time Job</option>
                                 <option value="ptj">Part Time Job</option>
@@ -48,28 +48,12 @@
                         </div>
                     </div>
                     <div class="submit-details">
-                        <input type="submit" value="Continue" id="continue">
+                        <input type="submit" value="Continue">
                     </div>
                 </div>
                 <br>
             </section>
         </form>
     </div>
-    <script>
-        if(document.readyState == 'loading'){
-            document.addEventListener('DOMContentLoaded', ready)
-        }else {
-            ready()
-        }
-        function ready(){
-            const formLogin = document.querySelector('form');
-            formLogin.addEventListener('submit',loadSurvey);
-            function loadSurvey(){
-                window.open("./survey.html").focus()
-                window.close("index.html")
-            }
-
-        }
-    </script>
 </body>
 </html>

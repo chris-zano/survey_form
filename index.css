@@ -13,18 +13,6 @@
     background-color: rgba(212, 205, 212,0.1);
 }
 
-
-.home {
-    text-decoration: none;
-    color: inherit;
-    font-size: 18px;
-}
-
-.home:hover {
-    color: red;
-    text-decoration: underline;
-}
-
 form {
     height: 100vh;
     padding: 1rem;
@@ -133,7 +121,6 @@ form {
     width: 150px;
     border-radius: 5px;
 }
-
 .submit-details > input:hover {
     background-color: rgba(180, 147, 180);  
     color: rgb(12, 12, 10);
