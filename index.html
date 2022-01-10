@@ -48,12 +48,28 @@
                         </div>
                     </div>
                     <div class="submit-details">
-                        <a href="./survey.html">Continue</a>
+                        <input type="submit" value="Continue" id="continue">
                     </div>
                 </div>
                 <br>
             </section>
         </form>
     </div>
+    <script>
+        if(document.readyState == 'loading'){
+            document.addEventListener('DOMContentLoaded', ready)
+        }else {
+            ready()
+        }
+        function ready(){
+            const formLogin = document.querySelector('form');
+            formLogin.addEventListener('submit',loadSurvey);
+            function loadSurvey(){
+                window.open("./survey.html").focus()
+                window.close("index.html")
+            }
+
+        }
+    </script>
 </body>
 </html>
