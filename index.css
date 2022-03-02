@@ -1,12 +1,36 @@
-* {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
     margin: 0;
     padding:0;
 }
 
+.container {
+    background-color: blue;
+}
 
-form {
-    height: 100vh;
-    padding: 1rem;
+.form-content {
+    background-color: red;
+    width: calc(100% - 100px);
+    margin-block: auto;
+    border: thin;
+    border-radius: 10px;
 }
 
  section {
@@ -26,7 +50,7 @@ form {
 
 /*-----DETAILS-----*/
 
-#details {
+/* #details {
     padding: 0.5rem;
 }
 
@@ -115,10 +139,10 @@ form {
     background-color: rgba(180, 147, 180);  
     color: rgb(12, 12, 10);
     transform: scale(1.1);
-}
+} */
 /*-----SURVEY-----*/
 
-#survey {
+/* #survey {
     padding: 1.5rem;
 }
 
@@ -145,11 +169,11 @@ form {
 
 #survey #form-survey #rate-eL, #survey #form-survey #rec-eL{
     margin-left: 1rem;
-}
+} */
 
 /*-----FEEDBACK-----*/
 
-#feedback {
+/* #feedback {
     display: flex;
     flex-flow: column;
 }
@@ -182,7 +206,7 @@ form {
 
 #submit-btn button:hover {
     background-color: rgb(1, 50, 156);
-}
+} */
 
 /* @media (min-width:1000px) {
     h1 {
@@ -311,4 +335,4 @@ form {
         border: none;
     }
 
-} */
+} */ 
