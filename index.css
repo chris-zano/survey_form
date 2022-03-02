@@ -12,9 +12,9 @@
 .header > h1 {font-size: 2rem;}
 
 .form-content {
-    width: calc(100% - 100px);
+    width: 90vw;
+    padding-block: 1rem;
     margin-inline: auto;
-    padding: 1rem;
     border-top: 1px solid;
     border-radius: 5px;
     box-shadow: 1px 3px 3px  #242424;
@@ -22,7 +22,7 @@
 
 .details {
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .details > h2 {
@@ -31,7 +31,6 @@
 }
 
 .details>div {
-    padding: 0.65rem 1rem;
     display: grid;
 }
 
@@ -56,7 +55,7 @@
 }
 
 .details div input#age {
-    width: fit-content;
+    width: max-content;
     margin-left: 1rem;
     box-shadow: 1px 3px 3px #1f1e1e;
     text-indent: 1rem;
@@ -74,7 +73,6 @@
 }
 
 .ocupation-input>select {
-    width: calc(100% - 150px);
     text-indent: 1rem;
     height: 40px;
     background-color: unset;
@@ -83,353 +81,230 @@
     box-shadow: 1px 3px 3px #1f1e1e;
 }
 
-.submit-details {
+.survey-container > .submit-details {
     width: fit-content;
-    margin: auto;
+    margin: 2rem auto;
 }
 .submit-details >input {
     box-shadow: 1px 3px 3px #1f1e1e;
     width: 150px;
+    height: 35px;
     font-size: 1rem;
-    font-weight: 600;
+    border: thin;
+    border-radius: 6px;
 }
 
 .submit-details >input:hover , .submit-details >input:focus
 {
     background-color: #1a3d3d;
     color: white;
+} 
+
+
+/* SURVEY FORM STYLING */
+
+.survey-container {
+    height: 100vh;
+    padding-inline: 2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* * {
-    margin: 0;
-    padding:0;
+#survey-form {
+    width: calc(100% - 10vw);
+    margin-inline: auto;
 }
-
-.container {
-    background-color: blue;
-}
-
-.form-content {
-    background-color: red;
-    width: calc(100% - 100px);
-    margin-block: auto;
-    border: thin;
-    border-radius: 10px;
-}
-
- section {
-    border-radius: 10px;
-    margin-top: 1rem;
-}   
-
-#title {
-    font-size: 30px;
+h2 {
     text-align: center;
+    padding-top: 10px;
 }
 
-#description {
-    font-size: 10px;
-    text-align: center;
-}
-
-/*-----DETAILS-----*/
-
-/* #details {
-    padding: 0.5rem;
-}
-
-.details {
-    width: fit-content;
+#form-input{
+    max-width: 600px;
     margin: auto;
+    padding: 10px;
+    font-size: 24px;
 }
 
-#details h2 {
-    width: 100%;
-    text-align: center;
-}
-
-#details #form-input {
-    margin: 0.2rem;
-    padding: 0.23rem;
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: 1rem;
-}
-
-#details #form-input label {
-    margin: 0.1rem;
-    padding: 0.15rem;
-    width: 50px;
-}
-
-#details #form-input input {
-    margin: 0.1rem;
-    padding: 0.15rem;
-    margin-left: 1rem;
+#form-input input {
+    width: 350px;
+    height: 35px;
+    margin-top: 5px;
+    border: 10px 10px 10px 10px  blue;
     border-radius: 5px;
 }
 
-.gender_occupation {
-    width: fit-content;
+#gender-input span {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+#gender-input {
+    max-width: 600px;
     margin: auto;
+    padding: 10px;
+    
 }
 
-#details #gender-input {
-    margin: 0.2rem;
-    padding: 0.23rem;
-    margin-left: 1rem;
-}
-
-#details #gender-input span {
-    margin: 0.1rem;
-    padding: 0.15rem;
-}
-
-#details #gender-input input {
-    margin: 0.1rem;
-    padding: 0.15rem;
-    margin-left: 0.55rem;
-}
-
-#details #ocupation-input #occupation {
-    margin: 0.2rem;
-    padding: 0.23rem;
-    margin-left: 1rem;
-}
-
-#details #ocupation-input #dropdown {
-    margin-left: 1rem;
-    margin: 0.1rem;
-    padding: 0.15rem;
-    margin-left: 1rem;
+#dropdown {
+    min-width: 300px;
+    min-height: 35px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
     border-radius: 5px;
-    text-align: center;
+    border-width: 2px;
+    border-color: black;
+}
+
+#form-survey {
+    max-width: 600px;
+    margin: 10px  auto;
+    padding: 10px;
+    
+}
+
+#rate-eL {
+    max-width: fit-content;
+    min-height: 35px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: black;
+}
+
+#form-survey p {
+    font-size: 18px;
+    font-weight: 600;
+}
+small {
+    font-size: 12px;
+    font-weight: 200;
 }
 
 .submit-details {
-   width: fit-content;
-   margin: auto;
-   margin-block: 1rem;
-}
-.submit-details > input{
-    text-decoration: none;
-    color: inherit;
-    border: 0.5px solid;
-    height: 50px;
-    width: 150px;
-    border-radius: 5px;
-}
-.submit-details > input:hover {
-    background-color: rgba(180, 147, 180);  
-    color: rgb(12, 12, 10);
-    transform: scale(1.1);
-} */
-/*-----SURVEY-----*/
-
-/* #survey {
-    padding: 1.5rem;
+    width: fit-content;
 }
 
-#survey h2 {
-    width: 100%;
+/* Footer Section Styling */
+
+footer {
+    background-color: #1d1919;
+    height: 100vh;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+    gap: 1em;
+}
+footer > * {
+    height: 60vh;
+    margin-block: auto;
+}
+.footer-title {
+    margin: 1rem;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+}
+
+.footer-title h2 {
+    color: #e6e6fa;
+    height: fit-content;
     text-align: center;
+    margin: auto;
+    font-family: 'Poppins',sans-serif;
+    font-size: 7ch;
+    text-shadow: 1px 2px #1d1919;
 }
 
-#survey #form-survey {
-    margin-top: 0.5rem;
-    line-height: 23.5px;
-}
-
-#survey #form-survey p {
-    font-size: larger;
-    padding: 5px;
-}
-
-#survey #form-survey label {
-    font-size: 16px;
-    margin: 5px;
-    padding: 5px;
-}
-
-#survey #form-survey #rate-eL, #survey #form-survey #rec-eL{
-    margin-left: 1rem;
-} */
-
-/*-----FEEDBACK-----*/
-
-/* #feedback {
-    display: flex;
-    flex-flow: column;
-}
-
-#feedback h2 {
+.links ul {
+    border-radius: 10px;
+    background-color: #aca9a9;
+    box-shadow: 0px 3px 3px #1d1919;
     width: fit-content;
     margin: auto;
-    padding: 1rem;
+}
+.links ul li {
+    display: inline-block;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+}
+
+footer form {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #302e2e;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    justify-content: center;
+}
+#name {
+    margin-top: 1rem;
+    box-shadow: 1px 3px 3px #0c0c0c;
+}
+#email {
+    box-shadow: 1px 3px 3px #0c0c0c;
+}
+#submit {
+    box-shadow: 1px 3px 3px #0c0c0c;
     margin-bottom: 1rem;
-}
-
-#feedback textarea {
-    min-height: 150px;
-    width: 80%;
-    margin: auto;
-}
-
-#feedback #submit-btn {
-    margin: 1rem auto;
-}
-
-#submit-btn button {
-    height: 30px;
     width: 100px;
-    background-color: rgb(55, 118, 255);
+    height: 30px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 2ch;
+}
+#submit:hover {
+    background-color: rgb(72, 116, 28);
+    color: white;
+    box-shadow: 1px 3px 3px #ce88e4;
+} 
+
+footer form input {
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    height: 50px;
     border: none;
-    color: seashell;
-    border-radius: 15px;
+    outline: none;
+    border-radius: 7.5px;
+    text-align: center;
+}
+textarea {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 1px 3px 3px #0c0c0c;
 }
 
-#submit-btn button:hover {
-    background-color: rgb(1, 50, 156);
-} */
 
-/* @media (min-width:1000px) {
-    h1 {
-        font-size: 36px;
-        max-width: fit-content;
-        margin: auto;
+@media (max-width:1000px) {
+    footer {
+        padding-inline: 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+        gap: 1em;
     }
-    
-    #description {
-        font-size: 16px;
-        max-width: fit-content;
-        margin: auto;
+    footer > * {
+        height: unset;
+        margin-block: auto;
     }
-    
-    #survey-form {
-        max-width: 800px;
-        margin: auto;
-    
+    footer form {
+        height: 100%;
+        width: 90vw;
+        margin-inline: auto;
+        border-radius: 10px;
+        box-shadow: 1px 3px 3px #0c0c0c;
+        background-color: #302e2e;
+        display: grid;
+        grid-auto-flow: row;
+        gap: 1rem;
+        justify-content: center;
     }
-    
-    section {
-        background-color: rgba(230, 219, 219, 0.459);
-        border-radius: 10px;  
-    }
-    
-    h2 {
-        max-width: fit-content;
-        margin: 15px auto;
-        text-align: center;
-    }
-    
-    #form-input{
-        max-width: 600px;
-        margin: auto;
-        padding: 10px;
-        font-size: 24px;
-    }
-    
-    #form-input input {
-        width: 350px;
-        height: 35px;
-        margin-top: 5px;
-        border: 10px 10px 10px 10px  blue;
-        border-radius: 5px;
-    }
-    
-    #gender-input span {
-        font-size: 24px;
-        margin-right: 20px;
-    }
-    
-    #gender-input {
-        max-width: 600px;
-        margin: auto;
-        padding: 10px;
-        
-    }
-    
-    
-    #dropdown {
-        min-width: 300px;
-        min-height: 35px;
-        margin-top: 5px;
-        font-size: 16px;
-        font-weight: 500;
-        border-radius: 5px;
-        border-width: 2px;
-        border-color: black;
-    }
-    
-    
-    
-    #form-survey {
-        max-width: 600px;
-        margin: 10px  auto;
-        padding: 10px;
-        
-    }
-    
-    #rate-eL {
-        max-width: fit-content;
-        min-height: 35px;
-        margin-top: 5px;
-        font-size: 16px;
-        font-weight: 500;
-        border-radius: 5px;
-        border-width: 2px;
-        border-color: black;
-    }
-    
-    
-    #form-survey p {
-        font-size: 18px;
-        font-weight: 600;
-    }
-    small {
-        font-size: 12px;
-        font-weight: 200;
-    }
-    
-    #comments {
-        min-height: 120px;
-        width: 100%;
-        padding: 0.625rem;
-        resize: vertical;
-    }
-    
-    #submit-btn {
-        max-width: fit-content;
-        margin: 10px auto;
-    }
-    
-    #submit {
-        margin: 10px;
-        min-width: 150px;
-        min-height: 20px;
-        font-family: 'Noto Sans Display', sans-serif;
-        font-weight: 600;
-        text-align: center;
-        border: 1px 1px 1px 1px rgb(129, 124, 124);
-        border-radius: 15px;
-    }
-    #submit:hover {
-        background-color: tomato;
-        transform: scale(1.2);
-        border: none;
-    }
-
-} */ 
+}
