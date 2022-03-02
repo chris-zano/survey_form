@@ -3,15 +3,6 @@
     padding:0;
 }
 
-@font-face {
-    font-family: 'Noto Sans Display', sans-serif;
-    src: url();
-}
-.container {
-    font-family: 'Noto Sans Display', sans-serif;
-    background-image: url(https://static.surveysparrow.com/site/assets/ss-dots-pattern-bg.svg);
-    background-color: rgba(212, 205, 212,0.1);
-}
 
 form {
     height: 100vh;
@@ -36,7 +27,6 @@ form {
 /*-----DETAILS-----*/
 
 #details {
-    background-color: rgba(222, 184, 135, 0.137);
     padding: 0.5rem;
 }
 
@@ -129,7 +119,6 @@ form {
 /*-----SURVEY-----*/
 
 #survey {
-    background-color: rgba(222, 184, 135, 0.137);
     padding: 1.5rem;
 }
 
@@ -161,7 +150,6 @@ form {
 /*-----FEEDBACK-----*/
 
 #feedback {
-    background-color: rgba(222, 184, 135, 0.137);
     display: flex;
     flex-flow: column;
 }
@@ -196,12 +184,7 @@ form {
     background-color: rgb(1, 50, 156);
 }
 
-@media (min-width:1000px) {
-    .container {
-        font-family: 'Noto Sans Display', sans-serif;
-        background-image: url(https://static.surveysparrow.com/site/assets/ss-dots-pattern-bg.svg);
-    
-    }
+/* @media (min-width:1000px) {
     h1 {
         font-size: 36px;
         max-width: fit-content;
@@ -328,4 +311,4 @@ form {
         border: none;
     }
 
-}
+} */
