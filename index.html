@@ -10,37 +10,40 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 id="title">E-Learning Survey Form</h1>
-            <p id="description">A survey to help improve the quality of e-learning</p>
+            <h1>E-Learning Survey Form</h1>
+            <p>A survey to help improve the quality of e-learning</p>
         </div>
         <div class="form-content">
             <form action="./survey.html" id="survey-form" method="get">
-                <section id="details">
+                <section>
                     <div class="details">
                         <h2>Details</h2>
-                        <div id="form-input">
-                            <label for="name" id="name-label"><strong>Name</strong> </label><br>
+                        <div>
+                            <label for="name" id="name-label">Name</label>
                             <input type="text" id="name" placeholder="Surname Firstname" required>
-                        </div><br>
-                        <div id="form-input">
-                            <label for="email" id="email-label"><strong>Email</strong> </label><br>
+                        </div>
+                        <div>
+                            <label for="email" id="email-label">Email</label>
                             <input type="email" id="email" placeholder="example@email.com" required>
-                        </div><br>
-                        <div id="form-input">
-                            <label for="age" id="age-label"><strong>Age</strong> </label><br>
+                        </div>
+                        <div>
+                            <label for="age" id="age-label">Age</label>
                             <input type="number" id="age" value="15" min="15" max="65" placeholder="15" required>
-                        </div><br>
+                        </div>
                         <div class="gender_occupation">
-                            <div id="gender-input" >
-                                <span><strong> Gender</strong> </span>
-                                <input type="radio" value="male" id="gender" required checked>
-                                <label for="male" id="male-label">Male </label>
-                                <input type="radio" value="female" id="gender">
-                                <label for="female" id="female-label">Female </label>
+                            <div class="gender-input" >
+                                <div>
+                                    <input type="radio" value="male" id="male" required checked>
+                                    <label for="male" id="male-label">Male </label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="female" id="female">
+                                    <label for="female" id="female-label">Female </label>
+                                </div>
                             </div>
-                            <div id="ocupation-input">
-                                <p id="occupation"><strong>What's your occupation ?</strong></p>
-                                <select id="dropdown" required>
+                            <div class="ocupation-input">
+                                <p >What's your occupation ?</p>
+                                <select name="occcupation" id="dropdown" required>
                                     <option value="student">Student</option>
                                     <option value="ftj">Full Time Job</option>
                                     <option value="ptj">Part Time Job</option>
@@ -53,7 +56,7 @@
                             <input type="submit" value="Continue">
                         </div>
                     </div>
-                    <br>
+                    
                 </section>
             </form>
         </div>

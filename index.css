@@ -1,7 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.header {
+    text-align: center;
+    padding: 0 1rem 5px;
+}
 
+.header > h1 {font-size: 2rem;}
 
+.form-content {
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    padding: 1rem;
+    border-top: 1px solid;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px  #242424;
+}
 
+.details {
+    display: grid;
+    gap: 0.5rem;
+}
 
+.details > h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+.details>div {
+    padding: 0.65rem 1rem;
+    display: grid;
+}
+
+.details div label {
+    font-size: 1rem;
+    font-weight: 100;
+    text-indent: 1rem;
+    padding: 1ch;
+}
+
+.details div input {
+    height: 40px;
+    background-color: unset;
+    border: thin;
+    border-radius: 5px;
+}
+
+.details div input#name ,.details div input#email{
+    width: calc(100% - 150px);
+    box-shadow: 1px 3px 3px #1f1e1e;
+    text-indent: 1rem;
+}
+
+.details div input#age {
+    width: fit-content;
+    margin-left: 1rem;
+    box-shadow: 1px 3px 3px #1f1e1e;
+    text-indent: 1rem;
+}
+
+.gender-input {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 150px 150px;
+}
+.gender-input > div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 20px 50px;
+}
+
+.ocupation-input>select {
+    width: calc(100% - 150px);
+    text-indent: 1rem;
+    height: 40px;
+    background-color: unset;
+    border: thin;
+    border-radius: 5px;
+    box-shadow: 1px 3px 3px #1f1e1e;
+}
+
+.submit-details {
+    width: fit-content;
+    margin: auto;
+}
+.submit-details >input {
+    box-shadow: 1px 3px 3px #1f1e1e;
+    width: 150px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.submit-details >input:hover , .submit-details >input:focus
+{
+    background-color: #1a3d3d;
+    color: white;
+}
 
 
 
