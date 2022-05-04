@@ -6,10 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Survey Creator</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 1rem;
+        }
+        .add-a-feature{
+            display: block;
+            width: 150px;
+            margin: 0 auto;
+
+        }
+        textarea {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .tile-div {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .tile-div>* {
+            margin: 10px;
+            padding: 5px;
+        }
+        .hide-btn{
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        
+    <div class="container" id="container">
+        <button class="add-a-feature" id="add-a-checkList">Add a checkList</button>
+        <button class="add-a-feature" id="add-a-radioList">Add a radioList</button>
+        <button class="add-a-feature" id="add-a-textArea">Add a textArea</button>
+
+        <form action="" id="form"></form>
+
+        <form action="" id="loaded-data"></form>
     </div>
+    <script src="./index.js"></script>
 </body>
 </html>
