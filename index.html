@@ -36,14 +36,18 @@
 </head>
 <body>
     <div class="container" id="container">
-        <button class="add-a-feature" id="add-a-checkList">Add a checkList</button>
-        <button class="add-a-feature" id="add-a-radioList">Add a radioList</button>
-        <button class="add-a-feature" id="add-a-textArea">Add a textArea</button>
+        <button type="button" class="add-a-feature" id="add-a-checkList">Add a checkList</button>
+        <button type="button" class="add-a-feature" id="add-a-radioList">Add a radioList</button>
+        <button type="button" class="add-a-feature" id="add-a-textArea">Add a textArea</button>
 
         <form action="" id="form"></form>
 
-        <form action="" id="loaded-data"></form>
+        <form action="" >
+            <div id="loaded-data" ></div><br>
+            <button type="button" id="post-form">SUBMIT</button>
+        </form>
     </div>
     <script src="./index.js"></script>
+    <script src="./postForm.js"></script>
 </body>
 </html>

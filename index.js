@@ -13,13 +13,10 @@ function ready() {
 function loadFromStorage() {
     const loadedData = JSON.parse(localStorage.getItem('query'))
     if(loadedData == null) {
-        console.log('empty');
     }
     else {
         for(var i = 0; i < loadedData.length; i++) {
-            console.log(loadedData.length);
             const item = loadedData[i]
-            console.log(item);
             const question = item.question
             const type = item.response.type
             const responseList = [...item.response.responseList]
@@ -47,43 +44,8 @@ function loadFromStorage() {
                     document.querySelector('#loaded-data').append(checkList);
                 }
             }
-
-            
-            console.log(question);
-            console.log(type);
-            console.log(responseList);
-    
-            // if(loadedData[i].response.type == 'checkbox') {
-            //     const newQueryTab = document.createElement('div');  
-            //     newQueryTab.innerHTML = `
-            //         <div id="queryTab">
-            //             <p id="question${i+1}">${i+1}. ${loadedData[i].question}</p>
-            //         </div>
-            //     `;
-            //     console.log(loadedData[i].response.responseList);
-            //     for(var i=0; i < loadedData[i].response.responseList.length; i++) {
-            //         const checkList = document.createElement('div')
-            //         checkList.innerHTML= `
-            //         <input type="checkbox">${loadedData[i].response.responseList[i]}
-            //         `
-            //         newQueryTab.append(checkList)
-            //     }
-            //     document.querySelector('#loaded-data').append(newQueryTab)
-            // }
-            // else {
-            //     const newQueryTab = document.createElement('div');  
-            //     newQueryTab.innerHTML = `
-            //         <div id="queryTab">
-            //             <p id="question${i+1}">${i+1}. ${loadedData[i].question}</p>
-            //         </div>
-            //     `;
-            //     document.querySelector('#loaded-data').append(newQueryTab)
-    
-            // }
-            
         }
     }
-
 }
 
 
@@ -155,7 +117,7 @@ function createTile(type) {
                     <textarea class="textarea" type="text" placeholder="enter response here"></textarea>
                 </div>
             </div>
-            <button id="add-textarea-btn">add new checkbox</button>
+            <button id="add-textarea-btn">add new ${type}</button>
             <input type="submit" id="submitForm" value="Save">
         `;
     
@@ -174,7 +136,7 @@ function createTile(type) {
                     <label for="${type}"><input id="${type}-label-input" type="text" placeholder="add text here" required></label>
                 </div>
             </div>
-            <button id="add-${type}-btn">add new checkbox</button>
+            <button id="add-${type}-btn">add new ${type} input</button>
             <input type="submit" id="submitForm" value="Save">
         `;
     
@@ -203,16 +165,9 @@ function submitTile(e) {
 
     const loadedData = JSON.parse(localStorage.getItem('query'))
     
-    //show hide buttons
-    // tile.classList.add('hide-btn')
-    // checkBox.classList.remove('hide-btn')
-    // radio.classList.remove('hide-btn')
-    // textarea.classList.remove('hide-btn')
-    
-    //save data
+   //save data
     const question = tile.querySelector('#question-here')
     const answers = tile.querySelectorAll('.answers')
-    console.log(question);
     
     const objData = {
         question: question.value,
@@ -224,7 +179,6 @@ function submitTile(e) {
     let fromLocale;
 
     if(loadedData == null) {
-        console.log('empty');
         fromLocale = []
         formDataArray = [...fromLocale ]
 
@@ -249,11 +203,10 @@ function submitTile(e) {
         }
         else if(item.classList.contains('textarea-div')) {
             objData.response.type = 'textarea'
-            console.log('textarea', item);
         }
     } 
     formDataArray.push(objData)
 
     localStorage.setItem('query',JSON.stringify(formDataArray))
-    console.log(formDataArray);    
+    location.href= ""
 }

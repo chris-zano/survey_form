@@ -7,7 +7,12 @@
     <title>Survey Creator</title>
 </head>
 <body>
-    <div class="survey-container">
+    <div class="survey-container" id="survey-container">
+        <h1></h1>
+        
     </div>
+    <script>
+        document.getElementById('survey-container').innerHTML = sessionStorage.getItem('preview');
+    </script>
 </body>
 </html>
