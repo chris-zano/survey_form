@@ -7,6 +7,17 @@ else {
 
 function ready() {
     loadFromStorage()
+    
+    const deletBtnArr = document.getElementsByClassName('delete-btn')
+    const qdata = JSON.parse(localStorage.getItem('query'))
+    for(var i =0; i <deletBtnArr.length; i++) {
+        const deleteBtn = deletBtnArr[i];
+        deleteBtn.addEventListener('click', (e) => {
+            e.target.parentElement.remove()
+
+        })
+    }
+    localStorage.setItem('query', JSON.stringify(qdata))
 }
 
 
@@ -22,8 +33,10 @@ function loadFromStorage() {
             const responseList = [...item.response.responseList]
             const newQueryTab = document.createElement('div');  
             newQueryTab.innerHTML = `
-                <div id="queryTab">
-                    <p id="question${i+1}">${i+1}. ${question}</p>
+                <div id="tab-${i+1}" >
+                    <div id="queryTab">
+                        <p id="question${i+1}">${question}</p>
+                    </div>
                 </div>
             `;
             document.querySelector('#loaded-data').append(newQueryTab)
@@ -33,7 +46,8 @@ function loadFromStorage() {
                 checkList.innerHTML= `
                 <input type="${type}" placeholder="enter a response here">
                 `;
-                document.querySelector('#loaded-data').append(checkList);
+                const id = `#tab-${i+1}`
+                document.querySelector(id).append(checkList);
             }
             else {
                 for(var j=0; j<responseList.length; j++) {
@@ -41,69 +55,77 @@ function loadFromStorage() {
                     checkList.innerHTML= `
                     <input type="${type}">${responseList[j]}
                     `;
-                    document.querySelector('#loaded-data').append(checkList);
+                    const id = `#tab-${i+1}`
+                    document.querySelector(id).append(checkList);
                 }
             }
+            const deleteBtn = document.createElement('button')
+            deleteBtn.classList.add('delete-btn')
+            deleteBtn.textContent = 'X';
+            const id = `#tab-${i+1}`
+            document.querySelector(id).append(deleteBtn);
         }
     }
+    
 }
 
 
-const checkBox = document.querySelector('#add-a-checkList')
-const radio = document.querySelector('#add-a-radioList')
-const textarea = document.querySelector('#add-a-textArea')
+const checkBox = document.querySelector('#checklist')
+const radio = document.querySelector('#radio')
+const textarea = document.querySelector('#textarea')
 
-checkBox.addEventListener('click',addFtr)
-radio.addEventListener('click',addFtr)
-textarea.addEventListener('click',addFtr)
+checkBox.addEventListener('click',() => {
+    disableBtn(checkBox)
+    disableBtn(radio)
+    disableBtn(textarea)
+    const setType = 'checkbox'
+    createTile(setType);
+    const addchbox = document.querySelector(`#add-${setType}-btn`);
+    addchbox.addEventListener('click',() => {
+        addCheckbox(setType)
+    });
+})
+radio.addEventListener('click',() => {
+    disableBtn(checkBox)
+    disableBtn(radio)
+    disableBtn(textarea)
+    const setType = 'radio'
+    createTile(setType);
+    const addchbox = document.querySelector(`#add-${setType}-btn`);
+    addchbox.addEventListener('click',() => {
+        addCheckbox(setType)
+    });
+})
+
+textarea.addEventListener('click',()=>{
+    disableBtn(checkBox)
+    disableBtn(radio)
+    disableBtn(textarea)
+    const setType = 'textarea'
+    createTile(setType);
+    const addchbox = document.querySelector('#add-textarea-btn');
+    addchbox.addEventListener('click',() => {
+        const newCheckbox = document.createElement('div')
+        newCheckbox.classList.add('textarea-div')
+        newCheckbox.classList.add('answers')
+        newCheckbox.innerHTML = `
+            <textarea class="textarea" type="text" placeholder="enter response here"></textarea>
+        `;
+        document.querySelector('#textarea-div').append(newCheckbox);
+    });
+})
 
 function disableBtn(btn) {
     btn.classList.add('hide-btn')
 }
 
-function addFtr(e) {
-    if(e.target.textContent == 'Add a radioList'){
-        const setType = 'radio'
-        createTile(setType);
-        const addchbox = document.querySelector(`#add-${setType}-btn`);
-        addchbox.addEventListener('click',() => {
-            addCheckbox(setType)
-        });
-        disableBtn(radio)
-        disableBtn(checkBox)
-        disableBtn(textarea)
-    }
-    else if(e.target.textContent == 'Add a checkList'){
-        const setType = 'checkbox'
-        createTile(setType);
-        const addchbox = document.querySelector(`#add-${setType}-btn`);
-        addchbox.addEventListener('click',() => {
-            addCheckbox(setType)
-        });
-        disableBtn(checkBox)
-        disableBtn(radio)
-        disableBtn(textarea)
-
-    }
-    else if(e.target.textContent == 'Add a textArea'){
-        const setType = 'textarea'
-        createTile(setType);
-        const addchbox = document.querySelector('#add-textarea-btn');
-        addchbox.addEventListener('click',() => {
-            const newCheckbox = document.createElement('div')
-            newCheckbox.classList.add('textarea-div')
-            newCheckbox.classList.add('answers')
-            newCheckbox.innerHTML = `
-                <textarea class="textarea" type="text" placeholder="enter response here"></textarea>
-            `;
-            document.querySelector('#textarea-div').append(newCheckbox);
-        });
-        disableBtn(checkBox)
-        disableBtn(textarea)
-        disableBtn(radio)
-        
-    }
-
+function addFtr(type) {   
+    const setType = type
+    createTile(setType);
+    const addchbox = document.querySelector(`#add-${setType}-btn`);
+    addchbox.addEventListener('click',() => {
+        addCheckbox(setType)
+    });
 }
 
 function createTile(type) {
@@ -208,5 +230,4 @@ function submitTile(e) {
     formDataArray.push(objData)
 
     localStorage.setItem('query',JSON.stringify(formDataArray))
-    location.href= ""
 }
