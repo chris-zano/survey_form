@@ -6,49 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Survey Creator</title>
-    <style>
-        .container {
-            display: grid;
-            gap: 1rem;
-        }
-        .add-a-feature{
-            display: block;
-            width: 150px;
-            margin: 0 auto;
-
-        }
-        textarea {
-            width: 300px;
-            margin: 0 auto;
-        }
-        .tile-div {
-            width: 300px;
-            margin: 0 auto;
-        }
-        .tile-div>* {
-            margin: 10px;
-            padding: 5px;
-        }
-        .hide-btn{
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <div class="container" id="container">
-        <div class="button-holder" id="button-holder">
-            <img src="./icons/checklist.png" alt="add_a_checkList" width="50px" id="checklist">
-            <img src="./icons/radio form.webp" alt="add_a_checkList" width="50px" id="radio">
-            <img src="./icons/textfield.png" alt="add_a_checkList" width="50px" id="textarea">
+        <div class="button-holder doFadeOut" id="button-holder">
+            <img src="./icons/checklist.png" alt="add_a_checkList" width="63px" id="checklist">
+            <img src="./icons/radio form.webp" alt="add_a_checkList" width="63px" id="radio">
+            <img src="./icons/textfield.png" alt="add_a_checkList" width="63px" id="textarea">
         </div>
+        <button type="button" id="button-selector" class="button-selector">+</button>
 
         <form action="" id="form"></form>
 
         <form action="" >
             <div id="loaded-data" >
-                
+
             </div>
-            <button type="button" id="post-form">SUBMIT</button>
+            <div class="post-form">
+                <button type="button" id="post-form">SUBMIT</button>
+            </div>
         </form>
     </div>
     <script src="./index.js"></script>

@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="survey.css">
     <title>Survey Creator</title>
 </head>
 <body>
     <div class="survey-container" id="survey-container">
         <h1></h1>
         
+    </div>
+    <div  class="post-form">
+        <button type="button" id="post-form">Publish</button>
     </div>
     <script>
         document.getElementById('survey-container').innerHTML = sessionStorage.getItem('preview');

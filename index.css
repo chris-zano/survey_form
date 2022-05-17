@@ -4,9 +4,160 @@
     box-sizing: border-box;
 }
 
-
-
 .button-holder {
-    background-color: aqua;
+    position: fixed;
+    bottom: 130px;
+    right: 10px;
     display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 10px;
+}
+
+.button-holder > img {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 3px 3px 3px #111;
+}
+
+.button-holder > img:hover {
+    transform: scale(1.1);
+}
+
+.button-selector {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    width: 63px;
+    height: 63px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(131, 128, 128);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 3px 3px 3px #111;
+    font-size: 2rem;
+    color: white;
+}
+
+#loaded-data {
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.tab-q {
+    padding: 1rem;
+    margin-block-end: 1rem;
+    box-shadow: 0px 3px 3px  #111;
+    border-radius: 1rem;
+}
+
+.query-tab {
+    padding: 10px;
+    font-family:  'Lucida Sans Unicode';
+    font-size: 1.2rem;
+    
+}
+
+.textarea-answer {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 10px;
+    margin-left: 1rem;
+}
+
+.label-answer {
+    font-family: sans-serif;
+    font-size: 1.15rem;
+}
+
+.delete-btn-div {
+    display: flex;
+    float: inline-end;
+}
+
+.delete-btn {
+    background-color: #ad0303;
+    color: white;
+    margin-top: 1rem;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 3px 3px  #111;
+
+}
+
+.tile-div {
+    width: 85vw;
+    min-height: 200px;
+    margin: 1rem auto;
+    box-shadow: 0px 3px 3px #111;
+    border-radius: 1rem;
+    display: grid;
+    padding: 1rem;
+    
+}
+
+.tile-div > * {
+    margin: 10px 0;
+}
+
+.tile-div > button, .tile-div > #submitForm {
+    width: 200px;
+    height: 30px;
+    margin-inline: auto;
+    background-color: beige;
+    border: none; 
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px #111;
+    font-family: sans-serif;
+    font-size: 2ch;
+}
+
+.tile-div >textarea {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 10px;
+
+}
+.post-form {
+    display: flex;
+    justify-content: center;
+}
+
+#post-form {
+    width: 200px;
+    height: 50px;
+    background-color: beige;
+    border: none; 
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px #111;
+    font-family: sans-serif;
+    font-size: 2ch;
+}
+
+.doFadeIn {
+    -webkit-animation:fadeInSlide forwards ease-in .5s;
+    animation:fadeInSlide forwards ease-in .5s;
+}
+.doFadeOut {
+    display: none;
+}
+
+@keyframes fadeInSlide
+{
+    0% { 
+        opactity:0; transform: translateY(100px);
+    }
+    100% {
+        opactity:1; transform: translateY(0); 
+    }
 }

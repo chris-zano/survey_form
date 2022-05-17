@@ -13,11 +13,40 @@ function ready() {
     for(var i =0; i <deletBtnArr.length; i++) {
         const deleteBtn = deletBtnArr[i];
         deleteBtn.addEventListener('click', (e) => {
-            e.target.parentElement.remove()
+            e.target.parentElement.parentElement.remove()
 
         })
     }
     localStorage.setItem('query', JSON.stringify(qdata))
+
+    const showHide = document.getElementById('button-selector')
+    showHide.classList.add('true')
+    showHide.addEventListener('click', () => {
+
+        if(showHide.classList.contains('false')) {
+
+            document.getElementById('button-holder').classList.remove('doFadeIn')
+            document.getElementById('button-holder').classList.add('doFadeOut')
+            document.getElementById('button-holder').classList.add('hide-btn')
+            showHide.classList.remove('false')
+            showHide.classList.add('true')
+
+            showHide.textContent = '+'
+        }
+        else if(showHide.classList.contains('true')) {
+
+            document.getElementById('button-holder').classList.remove('doFadeOut')
+            document.getElementById('button-holder').classList.add('doFadeIn')
+            document.getElementById('button-holder').classList.remove('hide-btn')
+            showHide.classList.remove('true')
+            showHide.classList.add('false')
+
+            showHide.textContent = 'X'
+
+        }
+
+
+    })
 }
 
 
@@ -33,9 +62,9 @@ function loadFromStorage() {
             const responseList = [...item.response.responseList]
             const newQueryTab = document.createElement('div');  
             newQueryTab.innerHTML = `
-                <div id="tab-${i+1}" >
-                    <div id="queryTab">
-                        <p id="question${i+1}">${question}</p>
+                <div id="tab-${i+1}" class="tab-q">
+                    <div id="queryTab-${i+1}" class="query-tab">
+                        <p id="question${i+1}">${i+1}. ${question}</p>
                     </div>
                 </div>
             `;
@@ -43,8 +72,9 @@ function loadFromStorage() {
 
             if(type == 'textarea') {
                 const checkList = document.createElement('div')
+                checkList.classList.add('input-fields')
                 checkList.innerHTML= `
-                <input type="${type}" placeholder="enter a response here">
+                <input type="${type}" placeholder="enter a response here" class="textarea-answer">
                 `;
                 const id = `#tab-${i+1}`
                 document.querySelector(id).append(checkList);
@@ -52,16 +82,20 @@ function loadFromStorage() {
             else {
                 for(var j=0; j<responseList.length; j++) {
                     const checkList = document.createElement('div')
+                    const ipId = `${type}-${responseList[j]}`
                     checkList.innerHTML= `
-                    <input type="${type}">${responseList[j]}
+                    <input type="${type}" name="${question}" id="${ipId}" class="input-answer">
+                    <label for="${ipId}" class="label-answer">${responseList[j]}<label>
                     `;
                     const id = `#tab-${i+1}`
                     document.querySelector(id).append(checkList);
                 }
             }
-            const deleteBtn = document.createElement('button')
-            deleteBtn.classList.add('delete-btn')
-            deleteBtn.textContent = 'X';
+            const deleteBtn = document.createElement('div')
+            deleteBtn.classList.add('delete-btn-div')
+            deleteBtn.innerHTML = `
+            <button type="button" class="delete-btn" >X</button>
+            `;
             const id = `#tab-${i+1}`
             document.querySelector(id).append(deleteBtn);
         }
@@ -230,4 +264,5 @@ function submitTile(e) {
     formDataArray.push(objData)
 
     localStorage.setItem('query',JSON.stringify(formDataArray))
+    location.href = ''
 }
